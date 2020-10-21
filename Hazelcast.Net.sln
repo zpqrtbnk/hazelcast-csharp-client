@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{25300DF5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hazelcast.Net.Win32", "src\Hazelcast.Net.Win32\Hazelcast.Net.Win32.csproj", "{7E3B8518-73DB-471A-B624-B2FD6D8CCB61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazelcast.Net.Polyglot", "src\Hazelcast.Net.Polyglot\Hazelcast.Net.Polyglot.csproj", "{8F75495D-9CD2-4917-B561-DC9882FDBD3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{7E3B8518-73DB-471A-B624-B2FD6D8CCB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E3B8518-73DB-471A-B624-B2FD6D8CCB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E3B8518-73DB-471A-B624-B2FD6D8CCB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F75495D-9CD2-4917-B561-DC9882FDBD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F75495D-9CD2-4917-B561-DC9882FDBD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F75495D-9CD2-4917-B561-DC9882FDBD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F75495D-9CD2-4917-B561-DC9882FDBD3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

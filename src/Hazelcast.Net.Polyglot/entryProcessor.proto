@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+//option java_multiple_files = true;
+//option java_package = "io.grpc.examples.helloworld";
+//option java_outer_classname = "HelloWorldProto";
+//option objc_class_prefix = "HLW";
+
+//package EntryProcessing; // JAVA
+
+// The entry processor service definition.
+//service EntryProcessor {
+service Processor { // JAVA
+	// Process an entry
+	rpc process (ProcessRequest) returns (ProcessReply) {}
+}
+
+// The request message containing processor data & the entry as IData,IData
+message ProcessRequest {
+	bytes processorData = 1;
+	bytes keyData = 2;
+	bytes valueData = 3;
+}
+
+// The response message containing the result as IData
+message ProcessReply {
+	bytes resultData = 1;
+	bytes newValueData = 2;
+	bool mutate = 3;
+}

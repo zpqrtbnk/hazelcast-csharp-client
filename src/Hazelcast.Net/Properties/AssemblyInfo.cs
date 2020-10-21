@@ -21,6 +21,7 @@ using Hazelcast;
 [assembly: InternalsVisibleTo("Hazelcast.Net.Tests, PublicKey=" + AssemblySigning.PublicKey)]
 [assembly: InternalsVisibleTo("Hazelcast.Net.Testing, PublicKey=" + AssemblySigning.PublicKey)]
 [assembly: InternalsVisibleTo("Hazelcast.Net.DependencyInjection, PublicKey=" + AssemblySigning.PublicKey)]
+[assembly: InternalsVisibleTo("Hazelcast.Net.Polyglot, PublicKey=" + AssemblySigning.PublicKey)]
 
 // We propose to accept that the code is not CLS Compliant anymore (remove
 // the CLSCompliant attribute), i.e. to stop actively indicating that the

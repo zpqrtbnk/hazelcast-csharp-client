@@ -37,6 +37,9 @@ namespace Hazelcast.DistributedObjects.Impl
 #endif
         Task<TResult> ExecuteAsync<TResult>(IEntryProcessor<TResult> processor, TKey key, CancellationToken cancellationToken)
         {
+            if (processor is ILoveEntryProcessor)
+                return await ExecuteAsync2(processor, key, cancellationToken);
+
             var (keyData, processorData) = ToSafeData(key, processor);
             var task = ExecuteAsync<TResult>(processorData, keyData, cancellationToken);
 
@@ -45,6 +48,16 @@ namespace Hazelcast.DistributedObjects.Impl
 #else
             return await task.CAF();
 #endif
+        }
+
+        public async Task<TResult> ExecuteAsync2<TResult>(IEntryProcessor<TResult> processor, TKey key, CancellationToken cancellationToken)
+        {
+            var (keyData, processorData) = ToSafeData(key, processor);
+            var foo = new CSharpEntryProcessor(processorData.ToByteArray());
+            var fooData = ToSafeData(foo);
+            var task = ExecuteAsync<TResult>(fooData, keyData, cancellationToken);
+
+            return await task.CAF();
         }
 
         /// <summary>

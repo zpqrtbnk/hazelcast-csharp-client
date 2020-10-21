@@ -883,8 +883,11 @@ function StartRemoteController() {
 
     if (-not (test-path "$tmpDir/rc")) { mkdir "$tmpDir/rc" >$null }
 
+    $script:classpath += ";$tmpDir\lib\grpc\*.jar" # FIXME autodetect?
+
     Write-Output ""
     Write-Output "Starting Remote Controller..."
+    Write-Output "ClassPath: $script:classpath"
 
     # start the remote controller
     $args = @(

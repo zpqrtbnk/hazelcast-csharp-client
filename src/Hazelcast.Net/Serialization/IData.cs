@@ -36,7 +36,9 @@ namespace Hazelcast.Serialization
         /// <returns>serializer type id</returns>
         int TypeId { get; }
 
-        /// <summary>Determines whether this instance has a partition hash.</summary>
+        /// <summary>
+        /// Whether this instance has a partition hash.
+        /// </summary>
         bool HasPartitionHash { get; }
 
         /// <summary>
@@ -45,7 +47,9 @@ namespace Hazelcast.Serialization
         /// <returns>The partition hash.</returns>
         int PartitionHash { get; }
 
-        /// <summary>Determines whether this instance was created from an <see cref="IPortable{T}"/> instance.</summary>
+        /// <summary>
+        /// Whether this instance was created from an <see cref="IPortable{T}"/> instance.
+        /// </summary>
         bool IsPortable { get; }
 
         /// <summary>Gets the byte array representation of this instance.</summary>
